@@ -1,270 +1,119 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
-<!-- head -->
-
 <head>
-  <script>
-    (function () {
-      var a_idx = 0;
-      window.onclick = function (event) {
-        var a = new Array("✨", "🤖", "🥳", "👋", "🦾", "🐽");
-
-        var heart = document.createElement("b");
-        heart.onselectstart = new Function('event.returnValue=false');
-
-        document.body.appendChild(heart).innerHTML = a[a_idx];
-        a_idx = (a_idx + 1) % a.length;
-        heart.style.cssText = "position: fixed;left:-100%;";
-
-        var f = 16,
-          x = event.clientX - f / 2,
-          y = event.clientY - f,
-          c = randomColor(),
-          a = 1,
-          s = 1.2;
-
-        var timer = setInterval(function () {
-          if (a <= 0) {
-            document.body.removeChild(heart);
-            clearInterval(timer);
-          } else {
-            heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
-              c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
-              s + ");";
-
-            y--;
-            a -= 0.016;
-            s += 0.002;
-          }
-        }, 15)
-
-      }
-      function randomColor() {
-
-        return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
-          .random() * 255)) + ")";
-
-      }
-    }());
-  </script>
-
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Jun Luo | 罗骏</title>
-
+  <meta charset="UTF-8">
+  <title>Jun Luo</title>
   <meta name="author" content="Jun Luo">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/icon.png">
 </head>
 
-<!-- body -->
-
 <body>
-  <!-- self-intro -->
-  <table
-    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr style="padding:0px">
-                <td style="padding:2%;width:55%;vertical-align:middle">
-                  <p style="text-align:center">
-                    <name>Jun Luo | 罗骏</name>
-                  </p>
-                  <p style="text-align: justify">
-                    <intro>
-                      Hello! I’m Jun Luo, an undergraduate student in Peking University, school of Physics. I’m currently taking a double major in computer science at school of EECS, PKU. 
-                      I am an incoming Phd Student of Prof. Gang Zeng at PKU School of intelligence Science and Technology.
-                      I highly suggest reading <a href="http://joschu.net/blog/opinionated-guide-ml-research.html" target="_blank">this guide</a>, which is guiding my research. Recently, I an interested in learning from and generative modeling of continuous data, like videos, images, and actions. My goal is to build intelligent machine that understand and interact with the world through language and action, thus imporving human's well being.
-                      <br>
-                      You can reach me by Email or Wechat.
-                      Welcome!
-                    </intro>
-                  <p style="text-align:center">
-                    <a href="mailto:luo_jun@stu.pku.edu.cn" target="_blank">Email</a> &nbsp/&nbsp
-                    <a href="https://scholar.google.com/citations?user=__9yvvcAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a> &nbsp/&nbsp
-                    <a href="https://github.com/roujinn/" target="_blank">Github</a>&nbsp/&nbsp
-                    <a href="https://x.com/roujin04" target="_blank">X</a>&nbsp/&nbsp
-                    <a href="images/wechat.jpg" target="_blank">WeChat</a>&nbsp/&nbsp
-                    <!-- <a href="pdf/JunLuo.pdf" target="_blank">CV</a> -->
-                  </p>
-                </td>
-                <td style="padding:0%; width:26%; max-width:26%;"> <!-- move the photo a bit left -->
-                  <br>
-                  <img
-                    style="padding:1%; width:100%; max-width:80%;  display: block; margin-left: auto; margin-right: auto; "
-                    alt="profile photo" src="images/me.jpg" class="hoverZoomLink">
-                </td> 
-              </tr>
-            </tbody>
-          </table>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- Research -->
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <br>
-      <heading>Research</heading>
-      <br>
-      <!-- <p>
-        My research interest is broadly in Diffusion models, Reinforcement learning with LLM, 3D Vision.
-      </p> -->
-
-      <td style="padding:20px; width:30%; vertical-align:middle">
-          <img src="images/sceneassistant.png" width="220" alt="sceneassistant image">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-        <a href="https://arxiv.org/abs/2603.12238" target="_blank">
-          <papertitle>SceneAssistant: A Visual Feedback Agent for Open-Vocabulary 3D Scene Generation
-          </papertitle>
-        </a>
-        <br>
-        <a:focus><strong>Jun Luo</strong></a:focus>,
-        <a class="a2" href="https://me.kiui.moe/" target="_blank">Jiaxiang Tang</a>,
-        <a class="a2" href="https://jason-aplp.github.io/Ruijie-Lu/" target="_blank">Ruijie Lu</a>,
-        <a class="a2" href="https://openreview.net/profile?id=~Gang_Zeng1" target="_blank">Gang Zeng</a>
-        <br>
-        <a href="https://arxiv.org/abs/2603.12238">Paper</a> /
-        <a href="https://github.com/ROUJINN/SceneAssistant">Code</a>
-        <br>
-        <!-- <em><strong>IROS 2025</strong></em> -->
-        <p></p>
-        <p> We introduce SceneAssistant, an agent that uses vision-language models and iterative visual feedback to generate and refine open-vocabulary 3D scenes from natural language descriptions.</p>
-      </td>
-    </tr>
-
-      <td style="padding:20px; width:30%; vertical-align:middle">
-          <img src="images/sdgpa.png" width="220" alt="sdgpa image">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-        <a href="https://arxiv.org/abs/2508.03300" target="_blank">
-          <papertitle>Zero Shot Domain Adaptive Semantic Segmentation by Synthetic Data Generation and Progressive Adaptation
-          </papertitle>
-        </a>
-        <br>
-        <a:focus><strong>Jun Luo</strong></a:focus>,
-        <a class="a2" href="https://jeremyzhao1998.github.io/" target="_blank">Zijing Zhao</a>,
-        <a class="a2" href="https://www.csyangliu.com/" target="_blank">Yang Liu</a>
-        <br>
-        <a href="https://arxiv.org/abs/2508.03300">Paper</a> /
-        <a href="https://github.com/ROUJINN/SDGPA">Code</a>
-        <br>
-        <em><strong>IROS 2025</strong></em>
-        <p></p>
-        <p> We address zero shot domain adaptative semantic segmentation by leveraging diffusion model to generate two synthetic domains and using a progressive adaptation training strategy</p>
-      </td>
-    </tr>
-
-
-    </tbody>
-  </table>
-
-  <!-- Services -->
-  <table style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr>
-        <br>
-        <heading>Services</heading>
-        <br>
-      <td style="padding:0px;width:100%;vertical-align:middle">
+  <main class="site-shell">
+    <section class="intro" aria-labelledby="intro-name">
+      <div class="intro-copy">
+        <h1 id="intro-name">Jun Luo (罗骏)</h1>
         <p>
-          <li>Reviewer: IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</li>
+          Hello! I’m Jun Luo, a Ph.D. student at Peking University’s School of Intelligence Science and Technology,
+          advised by Prof. Gang Zeng. My research interests lie in multimodal AI, with a focus on video generation and
+          VLMs.
         </p>
-      </td>
-    </tr>
-  </tbody></table>
+        <p>
+          Feel free to reach out by email or WeChat. I’m always happy to connect and exchange ideas.
+        </p>
+        <nav class="contact-links" aria-label="Contact links">
+          <a href="mailto:luo_jun@stu.pku.edu.cn">Email</a>
+          <span>/</span>
+          <a href="https://scholar.google.com/citations?user=__9yvvcAAAAJ&amp;hl=zh-CN">Google Scholar</a>
+          <span>/</span>
+          <a href="https://github.com/roujinn/">GitHub</a>
+          <span>/</span>
+          <a href="https://x.com/roujin04">X</a>
+          <span>/</span>
+          <a href="images/wechat.jpg">WeChat</a>
+        </nav>
+      </div>
+      <img class="profile-photo" src="images/me.jpg" alt="Profile photo">
+    </section>
 
-  <!-- Experience -->
-  <br>
-  <heading>Experience</heading>
-  <br>
-  <table width="100%" align="center" border="0" cellpadding="10">
-    <tbody>
-      <tr>
-        <td style="padding-left:20px;padding-right:20px;width:100%;vertical-align:middle">
-          <strong><a href="https://english.pku.edu.cn/" target="_blank">
-              <papertitle>Peking University (PKU)</papertitle>
-            </a></strong>
-          <br> <em>2022.09 - 2026.07</em>
-          <br> Bachelor of Science
-        </td>
-      </tr>
+    <section class="content-section" aria-labelledby="research-heading">
+      <h2 id="research-heading">Research</h2>
+      <div class="research-list">
+        <article class="research-item">
+          <h3><a href="https://arxiv.org/abs/2609.24308">HappyWorld-Bench</a></h3>
+          <p class="authors">&hellip;, <strong>Jun Luo</strong>, &hellip;</p>
+          <p class="venue"><em>Tech report</em></p>
+          <p>As a core contributor to HappyWorld-Bench, I developed benchmark metrics and evaluated models for the spatial (3D world model) track.</p>
+        </article>
 
-      <tr>
-        <td style="padding-left:20px;padding-right:20px;width:100%;vertical-align:middle">
-          <strong><a href="https://datascience.hku.hk/study/summer-research-training-programme/" target="_blank">
-              <papertitle>HKU IDS Summer Research Training Programme</papertitle>
-            </a></strong>
-          <br> <em>2025.07 - 2025.08</em>
-          <br> Research Advisor: <a href="https://yanchaoyang.github.io/" target="_blank">Yanchao Yang</a>
-        </td>
-      </tr>
-
-      <!-- <tr>
-        <td style="padding-left:20px;padding-right:20px;width:100%;vertical-align:middle">
-          <strong><a href="" target="_blank">
-              <papertitle>QiYuan Research (PrimeBot)</papertitle>
-            </a></strong>
-          <br> <em>2026.04 - 2026.05</em>
-        </td>
-      </tr> -->
-      
-    </tbody>
-  </table>
-
-  <!-- Hobbies -->
-  <br>
-  <heading>Misc</heading>
-  <br>
-  <table width="100%" align="center" border="0" cellpadding="10">
-    <tbody>
-      <tr>
-        <td style="padding-left:20px;padding-right:20px;width:100%;vertical-align:middle">
-          <p>
-            I warmly welcome new friends. Besides discussing study, research, work, and other things that might make us anxious, feel free to chat with me about your hobbies. Sharing the same hobbies makes chatting more enjoyable. You can visit <a href="hobbies.html" target="_blank">this page</a> (written in my native language, Chinese) to learn more about me if you're interested.
+        <article class="research-item">
+          <h3><a href="https://arxiv.org/abs/2603.12238">SceneAssistant: A Visual Feedback Agent for Open-Vocabulary 3D Scene Generation</a></h3>
+          <p class="authors">
+            <strong>Jun Luo</strong>,
+            <a class="author-link" href="https://me.kiui.moe/">Jiaxiang Tang</a>,
+            <a class="author-link" href="https://jason-aplp.github.io/Ruijie-Lu/">Ruijie Lu</a>,
+            <a class="author-link" href="https://openreview.net/profile?id=~Gang_Zeng1">Gang Zeng</a>
           </p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          <p class="paper-links"><a href="https://github.com/ROUJINN/SceneAssistant">Code</a></p>
+          <p>We introduce SceneAssistant, an agent that uses vision-language models and iterative visual feedback to generate and refine open-vocabulary 3D scenes from natural language descriptions.</p>
+        </article>
 
-  <!-- 容易被广告拦截 -->
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr>
-      <td style="text-align:center">
-        <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=ZJ2aDJeLALGunGxkcysDnKg_yRMd-NEryTlZ5IgcGvM&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
-      </td>
-    </tr>
-  </table>
+        <article class="research-item">
+          <h3><a href="https://arxiv.org/abs/2508.03300">Zero Shot Domain Adaptive Semantic Segmentation by Synthetic Data Generation and Progressive Adaptation</a></h3>
+          <p class="authors">
+            <strong>Jun Luo</strong>,
+            <a class="author-link" href="https://jeremyzhao1998.github.io/">Zijing Zhao</a>,
+            <a class="author-link" href="https://www.csyangliu.com/">Yang Liu</a>
+          </p>
+          <p class="paper-links">
+            <a href="https://arxiv.org/abs/2508.03300">Paper</a>
+            <span>/</span>
+            <a href="https://github.com/ROUJINN/SDGPA">Code</a>
+          </p>
+          <p class="venue"><em><strong>IROS 2025</strong></em></p>
+          <p>We use a diffusion model to generate two synthetic domains and a progressive adaptation strategy for zero-shot domain adaptation in semantic segmentation.</p>
+        </article>
+      </div>
+    </section>
 
+    <section class="content-section" aria-labelledby="services-heading">
+      <h2 id="services-heading">Services</h2>
+      <p class="service-line">Reviewer: IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</p>
+    </section>
 
+    <section class="content-section" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+      <div class="experience-list">
+        <article class="experience-item">
+          <h3><a href="https://english.pku.edu.cn/">Peking University (PKU)</a></h3>
+          <p><em>2026.09 - 2031.06 (expected)</em><br>Ph.D. Student in School of Intelligence Science and Technology</p>
+        </article>
+        <article class="experience-item">
+          <h3><a href="https://english.pku.edu.cn/">Peking University (PKU)</a></h3>
+          <p><em>2022.09 - 2026.07</em><br>B.Sc. in Applied Physics (School of Physics) <br>& B.Sc. in Computer Science and Technology (School of EECS)</p>
+        </article>
+        <article class="experience-item">
+          <h3><a href="https://datascience.hku.hk/study/summer-research-training-programme/">HKU IDS Summer Research Training Programme</a></h3>
+          <p><em>2025.07 - 2025.08</em><br> Research Advisor: <a href="https://yanchaoyang.github.io/">Yanchao Yang</a></p>
+        </article>
+      </div>
+    </section>
 
-  <!-- Aknowledgements -->
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr>
-        <!-- <br> -->
-        <!-- <br> -->
-        <hr>
-        <p style="text-align:center">
-          This homepage is designed based on <a href="https://jonbarron.info/">Jon Barron</a>'s website and adopted from <a href="https://github.com/geng-haoran/geng-haoran.github.io">Haoran Geng</a>. Last updated: May 10, 2026.
-          <br>
-          © 2026 Jun Luo
-        </p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <section class="content-section" aria-labelledby="misc-heading">
+      <h2 id="misc-heading">Misc</h2>
+      <p class="section-copy">
+        I enjoy meeting new people and chatting about research, everyday life, and shared hobbies. Visit
+        <a href="hobbies.html">this page</a> (in Chinese) to learn more about my interests beyond research.
+      </p>
+    </section>
 
+    <footer>
+      <p>This homepage is based on <a href="https://jonbarron.info/">Jon Barron</a>'s website. Last updated: September 29, 2026.<br>© 2026 Jun Luo</p>
+      <img class="visitor-count" src="https://visitor-badge.laobi.icu/badge?page_id=ROUJINN.ROUJINN.github.io&amp;left_text=visitors" alt="Visitor count">
+    </footer>
+  </main>
 </body>
 
 </html>
