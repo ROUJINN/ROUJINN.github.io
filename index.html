@@ -89,8 +89,12 @@
           <p><em>2026.09 - 2031.06 (expected)</em><br>Ph.D. Student in School of Intelligence Science and Technology</p>
         </article>
         <article class="experience-item">
+          <h3><a href="https://eng.bigai.ai/">BIGAI</a> &amp; AliBaBa HappyHorse Team</h3>
+          <p><em>2026.07 - present</em><br>Intern</p>
+        </article>
+        <article class="experience-item">
           <h3><a href="https://english.pku.edu.cn/">Peking University (PKU)</a></h3>
-          <p><em>2022.09 - 2026.07</em><br>B.Sc. in Applied Physics (School of Physics) <br>& B.Sc. in Computer Science and Technology (School of EECS)</p>
+          <p><em>2022.09 - 2026.06</em><br>B.Sc. in Applied Physics (School of Physics) <br>& B.Sc. in Computer Science and Technology (School of EECS)</p>
         </article>
         <article class="experience-item">
           <h3><a href="https://datascience.hku.hk/study/summer-research-training-programme/">HKU IDS Summer Research Training Programme</a></h3>
@@ -108,10 +112,22 @@
     </section>
 
     <footer>
-      <p>This homepage is based on <a href="https://jonbarron.info/">Jon Barron</a>'s website. Last updated: September 29, 2026.<br>© 2026 Jun Luo</p>
+      <p>This homepage is based on <a href="https://jonbarron.info/">Jon Barron</a>'s website. Last updated: <time id="last-updated" datetime="2026-10-14">October 14, 2026</time>.<br>© 2026 Jun Luo</p>
       <img class="visitor-count" src="https://visitor-badge.laobi.icu/badge?page_id=ROUJINN.ROUJINN.github.io&amp;left_text=visitors" alt="Visitor count">
     </footer>
   </main>
+  <script>
+    if (location.protocol === 'https:' || location.protocol === 'http:') {
+      const lastModified = new Date(document.lastModified);
+      if (!Number.isNaN(lastModified.getTime())) {
+        const lastUpdated = document.getElementById('last-updated');
+        lastUpdated.dateTime = lastModified.toISOString();
+        lastUpdated.textContent = lastModified.toLocaleDateString('en-US', {
+          year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Shanghai'
+        });
+      }
+    }
+  </script>
 </body>
 
 </html>
